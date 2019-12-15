@@ -1,3 +1,8 @@
+# my special
+lectures/
+Corpora/
+cs224n2017/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
