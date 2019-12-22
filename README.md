@@ -1,4 +1,4 @@
-cs224nSum
+##cs224nSum
 
 课程资料：
 
@@ -10,7 +10,7 @@ cs224nSum
 
 学习笔记参考：
 
-[CS224n-2019 学习笔记](https://looperxx.github.io/CS224n-2019-01-Introduction and Word Vectors/)
+[CS224n-2019 学习笔记](https://looperxx.github.io/CS224n-2019-01-Introduction%20and%20Word%20Vectors/)
 
 
 
@@ -30,7 +30,7 @@ cs224nSum
   - 在传统的自然语言处理中，我们把词语看作离散的符号，单词通过one-hot向量表示
   - 在Distributional semantics中，一个单词的意思是由经常出现在该单词附近的词(上下文)给出的，单词通过一个向量表示，称为word embeddings或者word representations，它们是分布式表示(distributed representation)
   - Word2vec的思想
-- [ ] cs224n-2019-notes01-wordvecs1.pdf
+- [x] cs224n-2019-notes01-wordvecs1.pdf
   - Natural Language Processing. 
   - Word Vectors. 
   - Singular Value Decomposition(SVD). (对共现计数矩阵进行SVD分解，得到词向量)
@@ -43,15 +43,25 @@ cs224nSum
 
 **Suggested Readings**
 
-1. [Word2Vec Tutorial - The Skip-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
-2. [Efficient Estimation of Word Representations in Vector Space](http://arxiv.org/pdf/1301.3781.pdf) (original word2vec paper)
-3. [Distributed Representations of Words and Phrases and their Compositionality](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) (negative sampling paper)
+- [x] [Word2Vec Tutorial - The Skip-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/) (该博客分为2个部分，skipgram思想，以及改进训练方法：下采样和负采样)
+- [x] [理解 Word2Vec 之 Skip-Gram 模型](https://zhuanlan.zhihu.com/p/27234078)(上述文章的翻译)
+- [x] [Applying word2vec to Recommenders and Advertising](http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertising/) (word2vec用于推荐和广告)
+- [x] [Efficient Estimation of Word Representations in Vector Space](http://arxiv.org/pdf/1301.3781.pdf) (original word2vec paper)(没太看懂，之后再看一遍)
+- [x] [Distributed Representations of Words and Phrases and their Compositionality](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) (negative sampling paper)
+- [x] [[NLP] 秒懂词向量Word2vec的本质](https://zhuanlan.zhihu.com/p/26306795)(推荐了一些很好的资料)
+- [ ] word2vec Parameter Learning Explained
+- [ ] 基于神经网络的词和文档语义向量表示方法研究
+- [ ] word2vec中的数学原理详解
 
 **Assignment 1：Exploring Word Vectors**
 
 - [x] Count-Based Word Vectors(共现矩阵的搭建, SVD降维, 可视化展示)
 
-- [ ] Prediction-Based Word Vectors(Word2Vec, 与SVD的对比, 使用gensim, 同义词,反义词,类比,Bias)
+- [x] Prediction-Based Word Vectors(Word2Vec, 与SVD的对比, 使用gensim, 同义词,反义词,类比,Bias)
+
+review
+
+word2vec的思想、算法步骤分解、代码
 
 
 
