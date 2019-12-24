@@ -2,6 +2,8 @@
 lectures/
 Corpora/
 cs224n2017/
+Lecture 01 Introduction and Word Vectors/
+Lecture 02 Word Vectors 2 and Word Senses/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
