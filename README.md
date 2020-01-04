@@ -1,5 +1,3 @@
-[TOC]
-
 
 
 ## cs224nSum
@@ -43,12 +41,12 @@
 
 **Lecture notes**
 
-- [x] cs224n-2019-lecture01-wordvecs1
+- [x] [cs224n-2019-lecture01-wordvecs1](https://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture01-wordvecs1.pdf)
   - WordNet, 一个包含同义词集和上位词(“is a”关系) **synonym sets and hypernyms** 的列表的辞典
   - 在传统的自然语言处理中，我们把词语看作离散的符号，单词通过one-hot向量表示
   - 在Distributional semantics中，一个单词的意思是由经常出现在该单词附近的词(上下文)给出的，单词通过一个向量表示，称为word embeddings或者word representations，它们是分布式表示(distributed representation)
   - Word2vec的思想
-- [x] cs224n-2019-notes01-wordvecs1
+- [x] [cs224n-2019-notes01-wordvecs1](https://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes01-wordvecs1.pdf)
   - Natural Language Processing. 
   - Word Vectors. 
   - Singular Value Decomposition(SVD). (对共现计数矩阵进行SVD分解，得到词向量)
@@ -57,7 +55,6 @@
   - Continuous Bag of Words(CBOW). (根据上下文预测中心词)
   - Negative Sampling. 
   - Hierarchical Softmax. 
-- [x] Gensim word vector visualization
 
 **Suggested Readings**
 
@@ -73,6 +70,8 @@
 - [x] 网易有道word2vec(词向量相关模型，word2vec部分代码解析与tricks)
 
 **Assignment 1：Exploring Word Vectors**
+
+[[code](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a1.zip)] [[preview](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a1_preview/exploring_word_vectors.html)]
 
 - [x] Count-Based Word Vectors(共现矩阵的搭建, SVD降维, 可视化展示)
 
@@ -95,9 +94,8 @@ word2vec的思想、算法步骤分解、代码
 
 **Lecture notes**
 
-- [x] Gensim word vector visualization
-
-- [x] cs224n-2019-lecture02-wordvecs2
+- [x] Gensim word vector visualization[[code](https://web.stanford.edu/class/cs224n/materials/Gensim.zip)] [[preview](https://web.stanford.edu/class/cs224n/materials/Gensim word vector visualization.html)]
+- [x] [cs224n-2019-lecture02-wordvecs2](https://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture02-wordvecs2.pdf)
   - 复习word2vec(一个单词的向量是一行；得到的概率分布不区分上下文的相对位置；每个词和and, of等词共同出现的概率都很高)
   - optimization: 梯度下降，随机梯度下降SGD，mini-batch(32或64,减少噪声，提高计算速度)，每次只更新出现的词的向量(特定行)
   - 为什么需要两个向量？——数学上更简单(中心词和上下文词分开考虑),最终是把2个向量平均。也可以每个词只用一个向量。
@@ -105,169 +103,266 @@ word2vec的思想、算法步骤分解、代码
   - 为什么不直接用共现计数矩阵？随着词语的变多会变得很大；维度很高，需要大量空间存储；后续的分类问题会遇到稀疏问题。解决方法：降维，只存储一些重要信息，固定维度。即做SVD。很少起作用，但在某些领域内被用的比较多，举例：Hacks to X(several used in Rohde et al. 2005)
   - Count based vs. direct prediction
   - Glove-结合两个流派的想法，在神经网络中使用计数矩阵，共现概率的比值可以编码成meaning component
-  - 评估单词向量的方法（内在—同义词、类比等，外在—在真实任务中测试，eg命名实体识别）
+  - 评估词向量的方法（内在—同义词、类比等，外在—在真实任务中测试，eg命名实体识别）
   - 词语多义性问题-1.聚类该词的所有上下文，得到不同的簇，将该词分解为不同的场景下的词。2.直接加权平均各个场景下的向量，奇迹般地有很好的效果
-
-- [ ] cs224n-2019-notes02-wordvecs2
+- [x] [cs224n-2019-notes02-wordvecs2](https://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes02-wordvecs2.pdf)
+  - Glove
+  - 评估词向量效果的方法
 
 **Suggested Readings**
 
-1. [GloVe: Global Vectors for Word Representation](http://nlp.stanford.edu/pubs/glove.pdf) (original GloVe paper)
-2. [Improving Distributional Similarity with Lessons Learned from Word Embeddings](http://www.aclweb.org/anthology/Q15-1016)
-3. [Evaluation methods for unsupervised word embeddings](http://www.aclweb.org/anthology/D15-1036)
+- [ ] [GloVe: Global Vectors for Word Representation](http://nlp.stanford.edu/pubs/glove.pdf) (original GloVe paper)
+- [ ] [Improving Distributional Similarity with Lessons Learned from Word Embeddings](http://www.aclweb.org/anthology/Q15-1016)
+- [ ] [Evaluation methods for unsupervised word embeddings](http://www.aclweb.org/anthology/D15-1036)
 
 Additional Readings:
 
-1. [A Latent Variable Model Approach to PMI-based Word Embeddings](http://aclweb.org/anthology/Q16-1028)
-2. [Linear Algebraic Structure of Word Senses, with Applications to Polysemy](https://transacl.org/ojs/index.php/tacl/article/viewFile/1346/320)
-3. [On the Dimensionality of Word Embedding.](https://papers.nips.cc/paper/7368-on-the-dimensionality-of-word-embedding.pdf)
+- [ ] [A Latent Variable Model Approach to PMI-based Word Embeddings](http://aclweb.org/anthology/Q16-1028)
+- [ ] [Linear Algebraic Structure of Word Senses, with Applications to Polysemy](https://transacl.org/ojs/index.php/tacl/article/viewFile/1346/320)
+- [ ] [On the Dimensionality of Word Embedding.](https://papers.nips.cc/paper/7368-on-the-dimensionality-of-word-embedding.pdf)
 
-Python review session
-[[slides](https://web.stanford.edu/class/cs224n/readings/python-review.pdf)]
+Python review[[slides](https://web.stanford.edu/class/cs224n/readings/python-review.pdf)]
+
+**review**
+
+glove的思想、算法步骤分解、代码
+
+评估词向量
 
 
 
 ### Lecture 03: Word Window Classification, Neural Networks, and Matrix Calculus
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture03-neuralnets.pdf)] [[video](https://youtu.be/8CWyBNX6eDo)]
+[[matrix calculus notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/gradient-notes.pdf)]
+[[notes (lectures 3 and 4)](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes03-neuralnets.pdf)]
 
-**Suggested Readings**
+Suggested Readings:
+
+1. [CS231n notes on backprop](http://cs231n.github.io/optimization-2/)
+2. [Review of differential calculus](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/review-differential-calculus.pdf)
+
+Additional Readings:
+
+1. [Natural Language Processing (Almost) from Scratch](http://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf)
+
+Assignment 2
+
+[[code](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a2.zip)] [[handout](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a2.pdf)]
 
 
 
 ### Lecture 04: Backpropagation and Computation Graphs
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture04-backprop.pdf)] [[video](https://youtu.be/yLYHDSv-288)]
+[[notes (lectures 3 and 4)](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes03-neuralnets.pdf)]
 
-**Suggested Readings**
+Suggested Readings:
+
+1. [CS231n notes on network architectures](http://cs231n.github.io/neural-networks-1/)
+2. [Learning Representations by Backpropagating Errors](http://www.iro.umontreal.ca/~vincentp/ift3395/lectures/backprop_old.pdf)
+3. [Derivatives, Backpropagation, and Vectorization](http://cs231n.stanford.edu/handouts/derivatives.pdf)
+4. [Yes you should understand backprop](https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b)
+
+
 
 
 
 ### Lecture 05: Linguistic Structure: Dependency Parsing
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture05-dep-parsing.pdf)] [[scrawled-on slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture05-dep-parsing-scrawls.pdf)]
+[[video](https://youtu.be/nC9_RfjYwqA)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes04-dependencyparsing.pdf)]
 
-**Suggested Readings**
+Suggested Readings:
+
+1. [Incrementality in Deterministic Dependency Parsing](https://www.aclweb.org/anthology/W/W04/W04-0308.pdf)
+2. [A Fast and Accurate Dependency Parser using Neural Networks](http://cs.stanford.edu/people/danqi/papers/emnlp2014.pdf)
+3. [Dependency Parsing](http://www.morganclaypool.com/doi/abs/10.2200/S00169ED1V01Y200901HLT002)
+4. [Globally Normalized Transition-Based Neural Networks](https://arxiv.org/pdf/1603.06042.pdf)
+5. [Universal Stanford Dependencies: A cross-linguistic typology](http://nlp.stanford.edu/~manning/papers/USD_LREC14_UD_revision.pdf)
+6. [Universal Dependencies website](http://universaldependencies.org/)
+
+Assignment 3
+
+[[code](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a3.zip)] [[handout](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a3.pdf)]
 
 
 
 ### Lecture 06: The probability of a sentence? Recurrent Neural Networks and Language Models
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture06-rnnlm.pdf)] [[video](https://youtu.be/iWea12EAu6U)]
+[[notes (lectures 6 and 7)](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes05-LM_RNN.pdf)]
 
-**Suggested Readings**
+Suggested Readings:
+
+1. [N-gram Language Models](https://web.stanford.edu/~jurafsky/slp3/3.pdf) (textbook chapter)
+2. [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) (blog post overview)
+3. [Sequence Modeling: Recurrent and Recursive Neural Nets](http://www.deeplearningbook.org/contents/rnn.html) (Sections 10.1 and 10.2)
+4. [On Chomsky and the Two Cultures of Statistical Learning](http://norvig.com/chomsky.html)
+
+
 
 
 
 ### Lecture 07: Vanishing Gradients and Fancy RNNs
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture07-fancy-rnn.pdf)] [[video](https://youtu.be/QEw0qEa0E50)]
+[[notes (lectures 6 and 7)](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes05-LM_RNN.pdf)]
 
-**Suggested Readings**
+Suggested Readings:
+
+1. [Sequence Modeling: Recurrent and Recursive Neural Nets](http://www.deeplearningbook.org/contents/rnn.html) (Sections 10.3, 10.5, 10.7-10.12)
+2. [Learning long-term dependencies with gradient descent is difficult](http://ai.dinfo.unifi.it/paolo//ps/tnn-94-gradient.pdf) (one of the original vanishing gradient papers)
+3. [On the difficulty of training Recurrent Neural Networks](https://arxiv.org/pdf/1211.5063.pdf) (proof of vanishing gradient problem)
+4. [Vanishing Gradients Jupyter Notebook](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1174/lectures/vanishing_grad_example.html) (demo for feedforward networks)
+5. [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) (blog post overview)
+
+Assignment 4
+
+[[code](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a4.zip)] [[handout](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a4.pdf)] [[Azure Guide](https://docs.google.com/document/d/1MHaQvbtPkfEGc93hxZpVhkKum1j_F1qsyJ4X0vktUDI/edit)] [[Practical Guide to VMs](https://docs.google.com/document/d/1z9ST0IvxHQ3HXSAOmpcVbFU5zesMeTtAc9km6LAPJxk/edit)]
 
 
 
 ### Lecture 08: Machine Translation, Seq2Seq and Attention
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture08-nmt.pdf)] [[video](https://youtu.be/XXtpJxZBa2c)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes06-NMT_seq2seq_attention.pdf)]
 
-**Suggested Readings**
+Suggested Readings:
+
+1. [Statistical Machine Translation slides, CS224n 2015](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1162/syllabus.shtml) (lectures 2/3/4)
+2. [Statistical Machine Translation](https://www.cambridge.org/core/books/statistical-machine-translation/94EADF9F680558E13BE759997553CDE5) (book by Philipp Koehn)
+3. [BLEU](https://www.aclweb.org/anthology/P02-1040.pdf) (original paper)
+4. [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/pdf/1409.3215.pdf) (original seq2seq NMT paper)
+5. [Sequence Transduction with Recurrent Neural Networks](https://arxiv.org/pdf/1211.3711.pdf) (early seq2seq speech recognition paper)
+6. [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473.pdf) (original seq2seq+attention paper)
+7. [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/) (blog post overview)
+8. [Massive Exploration of Neural Machine Translation Architectures](https://arxiv.org/pdf/1703.03906.pdf) (practical advice for hyperparameter choices)
 
 
 
 ### Lecture 09: Practical Tips for Final Projects
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture09-final-projects.pdf)] [[video](https://youtu.be/fyqm8fRDgl0)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/final-project-practical-tips.pdf)]
 
-**Suggested Readings**
+Suggested Readings:
+
+1. [Practical Methodology](https://www.deeplearningbook.org/contents/guidelines.html) (*Deep Learning* book chapter)
 
 
 
 ### Lecture 10: Question Answering and the Default Final Project
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture10-QA.pdf)] [[video](https://youtu.be/yIdF-17HwSk)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes07-QA.pdf)]
 
-**Suggested Readings**
+Project Proposal
+
+[[instructions](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/project/project-proposal-instructions.pdf)]
+
+Default Final Project
+
+[[handout](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/project/default-final-project-handout.pdf)] [[code](https://github.com/chrischute/squad)]
 
 
 
 ### Lecture 11: ConvNets for NLP
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture11-convnets.pdf)] [[video](https://youtu.be/EAJoRA0KX7I)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes08-CNN.pdf)]
 
-**Suggested Readings**
+Suggested Readings:
+
+1. [Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1408.5882)
+2. [A Convolutional Neural Network for Modelling Sentences](https://arxiv.org/pdf/1404.2188.pdf)
 
 
 
 ### Lecture 12: Information from parts of words: Subword Models
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture12-subwords.pdf)] [[video](https://youtu.be/9oTHFx0Gg3Q)]
 
-**Suggested Readings**
+Suggested readings:
+
+1. Minh-Thang Luong and Christopher Manning. [Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models](https://arxiv.org/abs/1604.00788)
+
+Assignment 5
+
+[[original code (requires Stanford login)](https://stanford.box.com/s/t4nlmcc08t9k6mflz6sthjlmjs7lip6p) / [public version](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a5_public.zip)] [[handout](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a5.pdf)]
 
 
 
 ### Lecture 13: Modeling contexts of use: Contextual Representations and Pretraining
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture13-contextual-representations.pdf)] [[video](https://youtu.be/S-CspeZ8FHc)]
 
-**Suggested Readings**
+Suggested readings:
+
+1. Smith, Noah A. [Contextual Word Representations: A Contextual Introduction](https://arxiv.org/abs/1902.06006). (Published just in time for this lecture!)
+2. [The Illustrated BERT, ELMo, and co.](http://jalammar.github.io/illustrated-bert/)
+
+
 
 
 
 ### Lecture 14: Transformers and Self-Attention For Generative Models(guest lecture by Ashish Vaswani and Anna Huang)
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture14-transformers.pdf)] [[video](https://youtu.be/5vcj8kSwBCY)]
 
-**Suggested Readings**
+Suggested readings:
+
+1. [Attention is all you need](https://arxiv.org/pdf/1706.03762.pdf)
+2. [Image Transformer](https://arxiv.org/pdf/1802.05751.pdf)
+3. [Music Transformer: Generating music with long-term structure](https://arxiv.org/pdf/1809.04281.pdf)
+
+Project Milestone
+
+[[instructions](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/project/project-milestone-instructions.pdf)]
 
 
 
 ### Lecture 15: Natural Language Generation
 
-**Lecture notes**
-
-**Suggested Readings**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture15-nlg.pdf)] [[video](https://youtu.be/4uG1NMKNWCU)]
 
 
 
 ### Lecture 16: Reference in Language and Coreference Resolution
 
-**Lecture notes**
-
-**Suggested Readings**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture16-coref.pdf)] [[video](https://youtu.be/i19m4GzBhfc)]
 
 
 
 ### Lecture 17: Multitask Learning: A general model for NLP? (guest lecture by Richard Socher)
 
-**Lecture notes**
-
-**Suggested Readings**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture17-multitask.pdf)] [[video](https://youtu.be/M8dsZsEtEsg)]
 
 
 
 ### Lecture 18: Constituency Parsing and Tree Recursive Neural Networks
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture18-TreeRNNs.pdf)] [[video](https://youtu.be/6Z4A3RSf-HY)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes09-RecursiveNN_constituencyparsing.pdf)]
 
-**Suggested Readings**
+Suggested Readings:
+
+1. [Parsing with Compositional Vector Grammars.](http://www.aclweb.org/anthology/P13-1045)
+2. [Constituency Parsing with a Self-Attentive Encoder](https://arxiv.org/pdf/1805.01052.pdf)
 
 
 
 ### Lecture 19: Safety, Bias, and Fairness (guest lecture by Margaret Mitchell)
 
-**Lecture notes**
-
-**Suggested Readings**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture19-bias.pdf)] [[video](https://youtu.be/XR8YSRcuVLE)]
 
 
 
 ### Lecture 20: Future of NLP + Deep Learning
 
-**Lecture notes**
+[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture20-future.pdf)] [[video](https://youtu.be/3wWZBGN-iX8)]
 
-**Suggested Readings**
+**Final project poster session**
+[[details](https://www.facebook.com/events/1218481914969541)]
+
+**Final Project Report due** [[instructions](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/project/project-report-instructions.pdf)]
+
+**Project Poster/Video due** [[instructions](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/project/project-postervideo-instructions.pdf)]
 
 
 

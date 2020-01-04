@@ -4,6 +4,25 @@ Corpora/
 cs224n2017/
 Lecture 01 Introduction and Word Vectors/
 Lecture 02 Word Vectors 2 and Word Senses/
+Lecture 03 Word Window Classification, Neural Networks, and Matrix Calculus/
+Lecture 04 Backpropagation and Computation Graphs/
+Lecture 05 Linguistic Structure Dependency Parsing/
+Lecture 06 The probability of a sentence Recurrent Neural Networks and Language Models/
+Lecture 07 Vanishing Gradients and Fancy RNNs/
+Lecture 08 Machine Translation, Seq2Seq and Attention/
+Lecture 09 Practical Tips for Final Projects/
+Lecture 10 Question Answering and the Default Final Project/
+Lecture 11 ConvNets for NLP/
+Lecture 12 Information from parts of words Subword Models/
+Lecture 13 Modeling contexts of use Contextual Representations and Pretraining/
+Lecture 14 Transformers and Self-Attention For Generative Models(guest lecture by Ashish Vaswani and Anna Huang)/
+Lecture 15 Natural Language Generation/
+Lecture 16 Reference in Language and Coreference Resolution/
+Lecture 17 Multitask Learning A general model for NLP (guest lecture by Richard Socher)/
+Lecture 18 Constituency Parsing and Tree Recursive Neural Networks/
+Lecture 19 Safety, Bias, and Fairness (guest lecture by Margaret Mitchell)/
+Lecture 20 Future of NLP + Deep Learning/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
