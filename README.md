@@ -2,13 +2,15 @@
 
 ## cs224nSum
 
+winter-2019
+
 课程资料：
 
-- Course page: https://web.stanford.edu/class/cs224n
-- Video page: https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z
+- [Course page](https://web.stanford.edu/class/cs224n)
+- [Video page](https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 - Video page (Chinese): 
-  - 可选字幕版：https://www.bilibili.com/video/av61620135 
-  - 纯中文字幕版：https://www.bilibili.com/video/av46216519
+  - [可选字幕版](https://www.bilibili.com/video/av61620135)
+  - [纯中文字幕版](https://www.bilibili.com/video/av46216519)
 
 学习笔记参考：
 
@@ -39,7 +41,7 @@
 5. Optimization basics (5 mins)
 6. Looking at word vectors (10 mins or less)
 
-**Lecture notes**
+**课件**
 
 - [x] [cs224n-2019-lecture01-wordvecs1](https://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture01-wordvecs1.pdf)
   - WordNet, 一个包含同义词集和上位词(“is a”关系) **synonym sets and hypernyms** 的列表的辞典
@@ -63,6 +65,9 @@
 - [x] [Applying word2vec to Recommenders and Advertising](http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertising/) (word2vec用于推荐和广告)
 - [x] [Efficient Estimation of Word Representations in Vector Space](http://arxiv.org/pdf/1301.3781.pdf) (original word2vec paper)(没太看懂，之后再看一遍)
 - [x] [Distributed Representations of Words and Phrases and their Compositionality](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) (negative sampling paper)
+
+参考阅读
+
 - [x] [[NLP] 秒懂词向量Word2vec的本质](https://zhuanlan.zhihu.com/p/26306795)(推荐了一些很好的资料)
 - [ ] word2vec Parameter Learning Explained
 - [ ] 基于神经网络的词和文档语义向量表示方法研究
@@ -92,7 +97,7 @@ word2vec的思想、算法步骤分解、代码
 5. Evaluating word vectors (15 mins)
 6. Word senses (5 mins)
 
-**Lecture notes**
+**课件**
 
 - [x] Gensim word vector visualization[[code](https://web.stanford.edu/class/cs224n/materials/Gensim.zip)] [[preview](https://web.stanford.edu/class/cs224n/materials/Gensim word vector visualization.html)]
 - [x] [cs224n-2019-lecture02-wordvecs2](https://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture02-wordvecs2.pdf)
@@ -111,7 +116,7 @@ word2vec的思想、算法步骤分解、代码
 
 **Suggested Readings**
 
-- [ ] [GloVe: Global Vectors for Word Representation](http://nlp.stanford.edu/pubs/glove.pdf) (original GloVe paper)
+- [x] [GloVe: Global Vectors for Word Representation](http://nlp.stanford.edu/pubs/glove.pdf) (original GloVe paper)
 - [ ] [Improving Distributional Similarity with Lessons Learned from Word Embeddings](http://www.aclweb.org/anthology/Q15-1016)
 - [ ] [Evaluation methods for unsupervised word embeddings](http://www.aclweb.org/anthology/D15-1036)
 
@@ -121,34 +126,61 @@ Additional Readings:
 - [ ] [Linear Algebraic Structure of Word Senses, with Applications to Polysemy](https://transacl.org/ojs/index.php/tacl/article/viewFile/1346/320)
 - [ ] [On the Dimensionality of Word Embedding.](https://papers.nips.cc/paper/7368-on-the-dimensionality-of-word-embedding.pdf)
 
+参考阅读
+
+- [x] [理解GloVe模型（+总结）](https://blog.csdn.net/u014665013/article/details/79642083)(很详细易懂，讲解了GloVe模型的思想)
+
+
+
 Python review[[slides](https://web.stanford.edu/class/cs224n/readings/python-review.pdf)]
 
 **review**
 
 glove的思想、算法步骤分解、代码
 
-评估词向量
+评估词向量的方法
 
 
 
 ### Lecture 03: Word Window Classification, Neural Networks, and Matrix Calculus
 
-[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture03-neuralnets.pdf)] [[video](https://youtu.be/8CWyBNX6eDo)]
-[[matrix calculus notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/gradient-notes.pdf)]
-[[notes (lectures 3 and 4)](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes03-neuralnets.pdf)]
+1. Course information update (5 mins)
+2. Classification review/introduction (10 mins)
+3. Neural networks introduction (15 mins)
+4. Named Entity Recognition (5 mins)
+5. Binary true vs. corrupted word window classification (15 mins)
+6. Matrix calculus introduction (20 mins)
+
+课件
+
+- [ ] [cs224n-2019-lecture03-neuralnets](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture03-neuralnets.pdf) 
+  - 分类：情感分类，命名实体识别，买卖决策等，softmax分类器，cross-entropy损失函数(线性分类器)
+  - 神经网络分类器，词向量分类的不同(同时学习权重矩阵和词向量，因此参数也更多)，神经网络简介
+  - 命名实体识别(NER)：找到文本中的"名字"并且进行分类
+  - 在上下文语境中给单词分类，怎么用上下文？将词及其上下文词的向量连接起来
+  - 比如如果这个词在上下文中是表示位置，给高分，否则给低分
+  - 梯度
+- [x] [matrix calculus notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/gradient-notes.pdf)
+- [ ] [cs224n-2019-notes03-neuralnets](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes03-neuralnets.pdf)
 
 Suggested Readings:
 
-1. [CS231n notes on backprop](http://cs231n.github.io/optimization-2/)
-2. [Review of differential calculus](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/review-differential-calculus.pdf)
+- [ ] [CS231n notes on backprop](http://cs231n.github.io/optimization-2/)
+- [ ] [Review of differential calculus](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/review-differential-calculus.pdf)
 
 Additional Readings:
 
-1. [Natural Language Processing (Almost) from Scratch](http://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf)
+- [ ] [Natural Language Processing (Almost) from Scratch](http://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf)
 
 Assignment 2
 
 [[code](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a2.zip)] [[handout](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a2.pdf)]
+
+review
+
+NER
+
+梯度
 
 
 
