@@ -162,6 +162,8 @@ glove的思想、算法步骤分解、代码
   - 梯度
 - [x] [matrix calculus notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/gradient-notes.pdf)
 - [ ] [cs224n-2019-notes03-neuralnets](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes03-neuralnets.pdf)
+  - 神经网络，最大边缘目标函数，反向传播
+  - 技巧：梯度检验，正则，Dropout，激活函数，数据预处理(减去均值，标准化，白化Whitening)，参数初始化，学习策略，优化策略(momentum, adaptive)
 
 Suggested Readings:
 
@@ -186,8 +188,26 @@ NER
 
 ### Lecture 04: Backpropagation and Computation Graphs
 
-[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture04-backprop.pdf)] [[video](https://youtu.be/yLYHDSv-288)]
-[[notes (lectures 3 and 4)](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes03-neuralnets.pdf)]
+1. Matrix gradients for our simple neural net and some tips [15 mins]
+2. Computation graphs and backpropagation [40 mins]
+3. Stuff you should know [15 mins]
+a. Regularization to prevent overfitting
+b. Vectorization
+c. Nonlinearities
+d. Initialization
+e. Optimizers
+f. Learning rates
+
+课件
+
+- [x] [cs224n-2019-lecture04-backprop](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture04-backprop.pdf)
+  - 梯度计算分解，一些tips，使用预训练的词向量的问题
+  - 计算图表示前向传播和反向传播，用上游的梯度和链式法则来得到下游的梯度
+  - 正则，矢量化，非线性，初始化，优化器，学习率
+
+- [ ] [cs224n-2019-notes03-neuralnets](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes03-neuralnets.pdf)
+
+
 
 Suggested Readings:
 
