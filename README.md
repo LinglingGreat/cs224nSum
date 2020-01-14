@@ -222,8 +222,18 @@ Suggested Readings:
 
 ### Lecture 05: Linguistic Structure: Dependency Parsing
 
-[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture05-dep-parsing.pdf)] [[scrawled-on slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture05-dep-parsing-scrawls.pdf)]
-[[video](https://youtu.be/nC9_RfjYwqA)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes04-dependencyparsing.pdf)]
+1. Syntactic Structure: Consistency and Dependency (25 mins)
+2. Dependency Grammar and Treebanks (15 mins)
+3. Transition-based dependency parsing (15 mins)
+4. Neural dependency parsing (15 mins)
+
+[cs224n-2019-lecture05-dep-parsing](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture05-dep-parsing.pdf) [[scrawled-on slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture05-dep-parsing-scrawls.pdf)]
+
+- 短语结构，依赖结构
+
+[cs224n-2019-notes04-dependencyparsing](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes04-dependencyparsing.pdf)
+
+
 
 Suggested Readings:
 
@@ -242,8 +252,12 @@ Assignment 3
 
 ### Lecture 06: The probability of a sentence? Recurrent Neural Networks and Language Models
 
-[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture06-rnnlm.pdf)] [[video](https://youtu.be/iWea12EAu6U)]
-[[notes (lectures 6 and 7)](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes05-LM_RNN.pdf)]
+[cs224n-2019-lecture06-rnnlm](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture06-rnnlm.pdf)
+
+- 语言模型
+- RNN
+
+[cs224n-2019-notes05-LM_RNN](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes05-LM_RNN.pdf)
 
 Suggested Readings:
 
@@ -259,7 +273,7 @@ Suggested Readings:
 ### Lecture 07: Vanishing Gradients and Fancy RNNs
 
 [[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture07-fancy-rnn.pdf)] [[video](https://youtu.be/QEw0qEa0E50)]
-[[notes (lectures 6 and 7)](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes05-LM_RNN.pdf)]
+[cs224n-2019-notes05-LM_RNN](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes05-LM_RNN.pdf)
 
 Suggested Readings:
 
