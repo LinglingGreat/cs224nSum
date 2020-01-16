@@ -252,6 +252,9 @@ Assignment 3
 
 ### Lecture 06: The probability of a sentence? Recurrent Neural Networks and Language Models
 
+Recurrent Neural Networks (RNNs) and why they’re great for Language
+Modeling (LM).
+
 [cs224n-2019-lecture06-rnnlm](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture06-rnnlm.pdf)
 
 - 语言模型
@@ -272,7 +275,15 @@ Suggested Readings:
 
 ### Lecture 07: Vanishing Gradients and Fancy RNNs
 
-[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture07-fancy-rnn.pdf)] [[video](https://youtu.be/QEw0qEa0E50)]
+- Problems with RNNs and how to fix them
+
+- More complex RNN variants
+
+[cs224n-2019-lecture07-fancy-rnn](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture07-fancy-rnn.pdf)
+
+- 梯度消失
+- LSTM和GRU
+
 [cs224n-2019-notes05-LM_RNN](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes05-LM_RNN.pdf)
 
 Suggested Readings:
@@ -290,6 +301,9 @@ Assignment 4
 
 
 ### Lecture 08: Machine Translation, Seq2Seq and Attention
+
+How we can do Neural Machine Translation (NMT) using an RNN based
+architecture called sequence to sequence with attention
 
 [[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture08-nmt.pdf)] [[video](https://youtu.be/XXtpJxZBa2c)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes06-NMT_seq2seq_attention.pdf)]
 
