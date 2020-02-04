@@ -286,6 +286,8 @@ Suggested Readings:
 
 [cs224n-2019-notes05-LM_RNN](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes05-LM_RNN.pdf)
 
+
+
 Suggested Readings:
 
 1. [Sequence Modeling: Recurrent and Recursive Neural Nets](http://www.deeplearningbook.org/contents/rnn.html) (Sections 10.3, 10.5, 10.7-10.12)
@@ -305,7 +307,19 @@ Assignment 4
 How we can do Neural Machine Translation (NMT) using an RNN based
 architecture called sequence to sequence with attention
 
-[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture08-nmt.pdf)] [[video](https://youtu.be/XXtpJxZBa2c)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes06-NMT_seq2seq_attention.pdf)]
+[cs224n-2019-lecture08-nmt](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture08-nmt.pdf)
+
+- 机器翻译：
+  - 1.1950s，早期是基于规则的，利用词典翻译；
+  - 2.1990s-2010s，基于统计的机器翻译(SMT)，从数据中学习统计模型，贝叶斯规则，考虑翻译和句子语法流畅。对齐：一对多，多对一，多对多。
+  - 3.2014-，基于神经网络的机器翻译(NMT)，seq2seq，两个RNNs。seq2seq任务有：总结(长文本到短文本)，对话，解析，代码生成(自然语言到代码)。贪心解码。束搜索解码
+  - 评估方式：BLEU(Bilingual Evaluation Understudy)
+  - 未解决的问题：词汇表之外的词，领域不匹配，保持较长文本的上下文，低资源语料少，没有加入常识，从训练数据中学到了偏见，无法解释的翻译，
+  - Attention。
+
+[cs224n-2019-notes06-NMT_seq2seq_attention](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes06-NMT_seq2seq_attention.pdf)
+
+
 
 Suggested Readings:
 
@@ -322,7 +336,31 @@ Suggested Readings:
 
 ### Lecture 09: Practical Tips for Final Projects
 
-[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture09-final-projects.pdf)] [[video](https://youtu.be/fyqm8fRDgl0)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/final-project-practical-tips.pdf)]
+1. Final project types and details; assessment revisited
+2. Finding research topics; a couple of examples
+3. Finding data
+4. Review of gated neural sequence models
+5. A couple of MT topics
+6. Doing your research
+7. Presenting your results and evaluation
+
+[cs224n-2019-lecture09-final-projects](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture09-final-projects.pdf)
+
+- 默认的项目是问答系统SQuAD
+- Look at ACL anthology for NLP papers: https://aclanthology.info
+- https://paperswithcode.com/sota
+- 数据：
+  - https://catalog.ldc.upenn.edu/
+  - http://statmt.org
+  - https://universaldependencies.org
+  - Look at Kaggle，research papers，lists of datasets
+  - https://machinelearningmastery.com/datasets-natural-languageprocessing/
+  - https://github.com/niderhoff/nlp-datasets
+- 
+
+[final-project-practical-tips](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/final-project-practical-tips.pdf)
+
+
 
 Suggested Readings:
 
@@ -332,7 +370,26 @@ Suggested Readings:
 
 ### Lecture 10: Question Answering and the Default Final Project
 
-[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture10-QA.pdf)] [[video](https://youtu.be/yIdF-17HwSk)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes07-QA.pdf)]
+1. Final final project notes, etc.
+2. Motivation/History
+3. The SQuAD dataset
+4. The Stanford Attentive Reader model
+5. BiDAF
+6. Recent, more advanced architectures
+7. ELMo and BERT preview
+
+[cs224n-2019-lecture10-QA](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture10-QA.pdf)
+
+- 两个部分：寻找那些可能包含答案的文档(信息检索)，从文档或段落中找答案(阅读理解)
+- 阅读理解的历史，2013年MCTest：P+Q——>A，2015/16：CNN/DM、SQuAD数据集
+- 开放领域问答的历史：1964年是依赖解析和匹配，1993年线上百科全书，1999年设立TREC问答，2011年IBM的DeepQA系统，2016年用神经网络和信息检索IR
+- SQuAD数据集，评估方法
+- 斯坦福的简单模型：Attentive Reader model，预测回答文本的起始位置和结束位置
+- BiDAF
+
+ [cs224n-2019-notes07-QA](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes07-QA.pdf)
+
+
 
 Project Proposal
 
@@ -346,7 +403,22 @@ Default Final Project
 
 ### Lecture 11: ConvNets for NLP
 
-[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture11-convnets.pdf)] [[video](https://youtu.be/EAJoRA0KX7I)] [[notes](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes08-CNN.pdf)]
+1. Announcements (5 mins)
+2. Intro to CNNs (20 mins)
+3. Simple CNN for Sentence Classification: Yoon (2014) (20 mins)
+4. CNN potpourri (5 mins)
+5. Deep CNN for Sentence Classification: Conneau et al. (2017)
+(10 mins)
+6. Quasi-recurrent Neural Networks (10 mins)
+
+[cs224n-2019-lecture11-convnets](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture11-convnets.pdf)
+
+- CNN
+- 句子分类
+
+[cs224n-2019-notes08-CNN](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/readings/cs224n-2019-notes08-CNN.pdf)
+
+
 
 Suggested Readings:
 
@@ -357,7 +429,15 @@ Suggested Readings:
 
 ### Lecture 12: Information from parts of words: Subword Models
 
-[[slides](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture12-subwords.pdf)] [[video](https://youtu.be/9oTHFx0Gg3Q)]
+1. A tiny bit of linguistics (10 mins)
+2. Purely character-level models (10 mins)
+3. Subword-models: Byte Pair Encoding and friends (20 mins)
+4. Hybrid character and word level models (30 mins)
+5. fastText (5 mins)
+
+[cs224n-2019-lecture12-subwords](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture12-subwords.pdf)
+
+- 
 
 Suggested readings:
 
