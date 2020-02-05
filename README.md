@@ -82,9 +82,9 @@ winter-2019
 
 - [x] Prediction-Based Word Vectors(Word2Vec, 与SVD的对比, 使用gensim, 同义词,反义词,类比,Bias)
 
-**review**
+**笔记整理**
 
-word2vec的思想、算法步骤分解、代码
+- word2vec的思想、算法步骤分解、代码
 
 
 
